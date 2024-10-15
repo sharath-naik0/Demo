@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.dockerfile
+
+tasks:
+  - init: dotnet restore
+  - command: dotnet test
+
+ports:
+  - port: 5000
+    onOpen: open-preview
