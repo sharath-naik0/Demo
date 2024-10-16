@@ -1,10 +1,4 @@
-image:
-  file: .gitpod.dockerfile
-
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: dotnet restore
-  - command: dotnet test
-
-ports:
-  - port: 5000
-    onOpen: open-preview
+  - init: wget https://dot.net/v1/dotnet-install.sh && chmod +x ./dotnet-install.sh # runs during prebuild
+    command: ./dotnet-install.sh --version latest --channel 5.0 && /home/gitpod/.dotnet/dotnet run single
