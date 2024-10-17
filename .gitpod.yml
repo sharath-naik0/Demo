@@ -1,5 +1,11 @@
-# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+# Use the Gitpod base image with .NET pre-installed
+image: gitpod/workspace-dotnet
+
 tasks:
-  - init: wget https://dot.net/v1/dotnet-install.sh && chmod +x ./dotnet-install.sh # runs during prebuild
-    command: ./dotnet-install.sh --version latest --channel 5.0
-  - command: /home/gitpod/.dotnet/dotnet test
+  - init: |
+      # Install .NET SDK
+      mkdir -p $DOTNET_ROOT && \
+      curl -fsSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 7.0 --install-dir $DOTNET_ROOT
+    command: |
+      # Run tests after installation
+      $DOTNET_ROOT/dotnet test
