@@ -62,20 +62,20 @@ namespace SeleniumTestProject
             Assert.That(errorMessage, Is.EqualTo("Please fill out this field."), "Error message not as expected.");
 
             // Fill in the form
-            driver.Value.FindElement(By.Id("name")).SendKeys("Athik Rehaman");
-            driver.Value.FindElement(By.Id("inputEmail4")).SendKeys("athikrehman65.ar@gmail.com");
-            driver.Value.FindElement(By.Id("inputPassword4")).SendKeys("Athik123");
-            driver.Value.FindElement(By.Id("company")).SendKeys("EGDK India");
+            driver.Value.FindElement(By.Id("name")).SendKeys("John Don");
+            driver.Value.FindElement(By.Id("inputEmail4")).SendKeys("john@gmail.com");
+            driver.Value.FindElement(By.Id("inputPassword4")).SendKeys("Jonny123");
+            driver.Value.FindElement(By.Id("company")).SendKeys("XYZ");
             driver.Value.FindElement(By.Id("websitename")).SendKeys("Lambda.com");
 
             var countryDropdown = new SelectElement(driver.Value.FindElement(By.Name("country")));
-            countryDropdown.SelectByText("India");
+            countryDropdown.SelectByText("USA");
 
-            driver.Value.FindElement(By.Id("inputCity")).SendKeys("Mangalore");
-            driver.Value.FindElement(By.Id("inputAddress1")).SendKeys("Kapikad");
-            driver.Value.FindElement(By.Id("inputAddress2")).SendKeys("Bejai");
-            driver.Value.FindElement(By.Id("inputState")).SendKeys("Karnataka");
-            driver.Value.FindElement(By.Id("inputZip")).SendKeys("576003");
+            driver.Value.FindElement(By.Id("inputCity")).SendKeys("abcd");
+            driver.Value.FindElement(By.Id("inputAddress1")).SendKeys("efgh");
+            driver.Value.FindElement(By.Id("inputAddress2")).SendKeys("ijkl");
+            driver.Value.FindElement(By.Id("inputState")).SendKeys("California");
+            driver.Value.FindElement(By.Id("inputZip")).SendKeys("018831");
 
             driver.Value.FindElement(By.XPath("//button[normalize-space()='Submit']")).Click();
             IWebElement successMessageElement = wait.Until(d => d.FindElement(By.XPath("//p[@class='success-msg hidden']")));
