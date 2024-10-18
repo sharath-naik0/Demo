@@ -11,8 +11,8 @@ namespace SeleniumTestProject
     [TestFixture]
     public class TestScenario1 : IDisposable
     {
-        public static string LT_USERNAME = Environment.GetEnvironmentVariable("LT_USERNAME") ?? "athikrehman65.ar";
-        public static string LT_ACCESS_KEY = Environment.GetEnvironmentVariable("LT_ACCESS_KEY") ?? "JGwzyWC7RRqGqfW5YypyIMHGGSb6HZwfvAIBRPXoFNELxww7qJ";
+        public static string LT_USERNAME = Environment.GetEnvironmentVariable("LT_USERNAME") ?? "sharatnaik109";
+        public static string LT_ACCESS_KEY = Environment.GetEnvironmentVariable("LT_ACCESS_KEY") ?? "VVukNOCbsg66fAMjUvaktIm8wyu1kqAGUVpmnHrX2tKnaBHUY7";
         public static string seleniumUri = "https://hub.lambdatest.com/wd/hub";
 
         private readonly ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
