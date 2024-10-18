@@ -69,7 +69,7 @@ namespace SeleniumTestProject
             driver.Value.FindElement(By.Id("websitename")).SendKeys("Lambda.com");
 
             var countryDropdown = new SelectElement(driver.Value.FindElement(By.Name("country")));
-            countryDropdown.SelectByText("USA");
+            countryDropdown.SelectByText("India");
 
             driver.Value.FindElement(By.Id("inputCity")).SendKeys("abcd");
             driver.Value.FindElement(By.Id("inputAddress1")).SendKeys("efgh");
